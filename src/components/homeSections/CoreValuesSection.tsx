@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Reveal } from "../../utils/Reveal";
-import SplitText from "../../components/SplitText";
+import SplitText from "../SplitText";
 import imag1 from "../../assets/image1.png"
 import imag2 from "../../assets/image2.png"
 import imag3 from "../../assets/image3.png";

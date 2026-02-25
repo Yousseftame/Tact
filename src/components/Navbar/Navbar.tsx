@@ -79,9 +79,9 @@ const styles = `
   }
 
   .navbar-links li a {
-    font-family: 'Raleway', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
+    font-family: '', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: rgba(240,234,224,0.65);
@@ -116,7 +116,7 @@ const styles = `
 
   /* ── CTA BUTTON ── */
   .navbar-cta {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Cormorant SC', sans-serif;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -348,9 +348,9 @@ export default function Navbar() {
           </ul>
 
           {/* CTA */}
-          <Link to="/" className="navbar-cta">
+          <a href="tel:01559193996" target="_blank"  className="navbar-cta">
             Contact Us
-          </Link>
+          </a>
 
           {/* Hamburger */}
           <button

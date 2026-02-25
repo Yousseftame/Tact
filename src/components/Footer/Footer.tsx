@@ -64,7 +64,7 @@ const styles = `
     background: linear-gradient(to bottom, transparent, rgba(184,151,90,0.4), transparent);
   }
   .footer-logo-sub {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8.5px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -144,7 +144,7 @@ const styles = `
 
   /* About column */
   .footer-tagline {
-    font-family: 'EB Garamond', serif;
+    font-family: , serif;
     font-size: 15px;
     font-style: italic;
     line-height: 2;
@@ -162,7 +162,7 @@ const styles = `
 
   /* Column title */
   .footer-col-title {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8.5px;
     font-weight: 400;
     letter-spacing: 6px;
@@ -188,7 +188,7 @@ const styles = `
     gap: 0;
   }
   .footer-links li a {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: '', serif;
     font-size: 16px;
     font-weight: 300;
     color: rgba(240,234,224,0.42);
@@ -225,14 +225,14 @@ const styles = `
   }
   .footer-contact-item:last-child { border-bottom: none; }
   .footer-contact-label {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 7.5px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: rgba(184,151,90,0.4);
   }
   .footer-contact-value {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: '', serif;
     font-size: 15px;
     font-weight: 300;
     color: rgba(240,234,224,0.5);
@@ -251,7 +251,7 @@ const styles = `
   }
 
   .footer-copy {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8px;
     letter-spacing: 3px;
     color: rgba(240,234,224,0.2);
@@ -273,7 +273,7 @@ const styles = `
   }
 
   .footer-legal {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8px;
     letter-spacing: 3px;
     color: rgba(240,234,224,0.15);
@@ -373,7 +373,7 @@ export default function Footer() {
               <p className="footer-tagline">
                 Crafting extraordinary spaces with precision, vision, and
                 enduring quality — transforming architectural dreams into
-                lasting legacies since 2010.
+                lasting legacies since 2025.
               </p>
             </div>
 
@@ -422,21 +422,23 @@ export default function Footer() {
               <p className="footer-col-title">Contact</p>
               <div className="footer-contact-item">
                 <span className="footer-contact-label">Location</span>
-                <span className="footer-contact-value">Cairo, Egypt</span>
+                <span className="footer-contact-value">
+                  52, Street 6, 1st District, 5th Settlement, New cairo
+                </span>
               </div>
               <div className="footer-contact-item">
                 <span className="footer-contact-label">Email</span>
                 <a
-                  href="mailto:info@tact-innovations.com"
+                  href="mailto:Info@tactinnovations.com"
                   className="footer-contact-value"
                 >
-                  info@tact-innovations.com
+                  Info@tactinnovations.com
                 </a>
               </div>
               <div className="footer-contact-item">
                 <span className="footer-contact-label">Phone</span>
-                <a href="tel:+201000000000" className="footer-contact-value">
-                  +20 100 000 0000
+                <a href="tel:01559193996" target="_blank" className="footer-contact-value">
+                  +20 155 9193 996
                 </a>
               </div>
             </div>

@@ -18,7 +18,7 @@ export const routes = createBrowserRouter([
       {path:"home", element: <Home/>  },
       { path: "ThreeDprojects", element: <ThreeDProjects /> },
       { path: "OnGroundProejcts", element: <OnGroundProjects /> },
-      { path: "Transportation ", element: <Transportation /> },
+      { path: "Transportation", element: <Transportation /> },
     ],
   },
 ]);

@@ -321,7 +321,7 @@ export default function HeroSection() {
           {/* LEFT: Brand + Title */}
           <div className="hero-left">
             <p className={`hero-eyebrow ${cls}`}>
-              Est. 2010 &nbsp;·&nbsp; Cairo, Egypt
+              Est. 2025 &nbsp;·&nbsp; Cairo, Egypt
             </p>
 
             <h1 className={`hero-title ${cls}`}>

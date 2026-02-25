@@ -1,6 +1,6 @@
 import React from "react";
 import { Reveal } from "../../utils/Reveal";
-import SplitText from "../../components/SplitText";
+import SplitText from "../SplitText";
 import icon1 from "../../assets/1-removebg-preview.png";
 import icon2 from "../../assets/2-removebg-preview.png";
 import icon3 from "../../assets/3-removebg-preview.png";

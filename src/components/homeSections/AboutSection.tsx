@@ -1,7 +1,7 @@
 import React from "react";
 import { Reveal } from "../../utils/Reveal";
-import SplitText from "../../components/SplitText";
-import CountUp from "../../components/CountUp";
+import SplitText from "../SplitText";
+import CountUp from "../CountUp";
 
 const styles = `
 
@@ -110,7 +110,7 @@ const styles = `
     text-align: center;
   }
   .about-image-badge-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: '', serif;
     font-size: 42px;
     font-weight: 300;
     color: #C4A464;
@@ -119,7 +119,7 @@ const styles = `
     letter-spacing: -1px;
   }
   .about-image-badge-lbl {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -188,7 +188,7 @@ const styles = `
 
   /* Body text */
   .about-body {
-    font-family: 'EB Garamond', serif;
+    font-family: '', serif;
     font-size: clamp(15px, 1.2vw, 17px);
     font-style: italic;
     font-weight: 400;
@@ -228,7 +228,7 @@ const styles = `
   .about-stat:hover::before { height: 100%; }
 
   .about-stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: '', serif;
     font-size: clamp(38px, 4vw, 54px);
     font-weight: 300;
     color: #C4A464;
@@ -238,7 +238,7 @@ const styles = `
     display: block;
   }
   .about-stat-lbl {
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8.5px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -247,7 +247,7 @@ const styles = `
     font-weight: 300;
   }
   .count-up-text {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: '', serif;
     font-weight: 300;
     color: #C4A464;
   }
@@ -295,7 +295,7 @@ export default function AboutSection() {
                 <div className="about-frame" />
               </div>
               <div className="about-image-badge">
-                <span className="about-image-badge-num">2010</span>
+                <span className="about-image-badge-num">2025</span>
                 <span className="about-image-badge-lbl">Established</span>
               </div>
             </div>
@@ -347,14 +347,15 @@ export default function AboutSection() {
                 leading company in the field of facilities management, and we
                 are also dedicated to shaping more bright future of living
                 spaces.
-              </p>
-              <p className="about-body">
+                <br />
+                <br />
                 With a passion for innovation, sustainability, and aesthetics,
                 we transform architectural dreams into reality.
               </p>
+              
 
               <div className="about-stats-rule" />
-              <div className="about-stats">
+              <div className="about-stats ">
                 {[
                   { from: 0, to: 15, suffix: "+", lbl: "Years of Excellence" },
                   { from: 0, to: 200, suffix: "+", lbl: "Projects Completed" },

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Reveal } from "../../utils/Reveal";
-import SplitText from "../../components/SplitText";
+import SplitText from "../SplitText";
 
 const styles = `
   .vm-section {

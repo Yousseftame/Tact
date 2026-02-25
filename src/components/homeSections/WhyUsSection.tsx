@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Reveal } from "../../utils/Reveal";
-import SplitText from "../../components/SplitText";
+import SplitText from "../SplitText";
 
 const reasons = [
   {
@@ -226,7 +226,7 @@ const styles = `
 
   /* Number */
   .why-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: '', serif;
     font-size: 11px;
     font-weight: 300;
     letter-spacing: 5px;
@@ -277,7 +277,7 @@ const styles = `
     align-items: center;
     gap: 8px;
     margin-top: 18px;
-    font-family: 'Cormorant SC', serif;
+    font-family: '', serif;
     font-size: 8px;
     letter-spacing: 5px;
     text-transform: uppercase;

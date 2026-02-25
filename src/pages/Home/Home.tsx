@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import HeroSection from "../../components/sections/HeroSection";
-import AboutSection from "../../components/sections/AboutSection";
-import VisionMissionSection from "../../components/sections/VisionMissionSection";
-import CoreValuesSection from "../../components/sections/CoreValuesSection";
-import WhyUsSection from "../../components/sections/WhyUsSection";
-import ServicesSection from "../../components/sections/ServicesSection";
-import ClientsSection from "../../components/sections/ClientsSection";
+import HeroSection from "../../components/homeSections/HeroSection";
+import AboutSection from "../../components/homeSections/AboutSection";
+import VisionMissionSection from "../../components/homeSections/VisionMissionSection";
+import CoreValuesSection from "../../components/homeSections/CoreValuesSection";
+import WhyUsSection from "../../components/homeSections/WhyUsSection";
+import ServicesSection from "../../components/homeSections/ServicesSection";
+import ClientsSection from "../../components/homeSections/ClientsSection";
 import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
