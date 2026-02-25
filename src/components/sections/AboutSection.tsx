@@ -1,8 +1,9 @@
 import React from "react";
 import { Reveal } from "../../utils/Reveal";
+import SplitText from "../../components/SplitText";
+import CountUp from "../../components/CountUp";
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+SC:wght@300;400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
 
   .about-section {
     background: #05080A;
@@ -245,6 +246,11 @@ const styles = `
     display: block;
     font-weight: 300;
   }
+  .count-up-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    color: #C4A464;
+  }
 
   /* Top border above stats */
   .about-stats-rule {
@@ -276,6 +282,7 @@ export default function AboutSection() {
       <style>{styles}</style>
       <section className="about-section">
         <div className="about-inner">
+
           {/* ── Left: Image ── */}
           <Reveal direction="left" delay={100}>
             <div className="about-image-wrap">
@@ -301,9 +308,33 @@ export default function AboutSection() {
               <p className="about-label">Who We Are</p>
 
               <h2 className="about-title">
-                Building the Future
+                <SplitText
+                  text="Building the Future"
+                  delay={40}
+                  duration={1.2}
+                  ease="power3.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 36 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-80px"
+                  textAlign="left"
+                />
                 <br />
-                <em>with Precision &amp; Vision</em>
+                <em>
+                  <SplitText
+                    text="with Precision & Vision"
+                    delay={55}
+                    duration={1.2}
+                    ease="power3.out"
+                    splitType="chars"
+                    from={{ opacity: 0, y: 36 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="-80px"
+                    textAlign="left"
+                  />
+                </em>
               </h2>
 
               <div className="about-ornament">
@@ -312,32 +343,45 @@ export default function AboutSection() {
               </div>
 
               <p className="about-body">
-                Tact innovations design & general contracting is a cutting-edge
-                architectural design firm, founded in March 2023. We are a
-                leading company in the field of facilities management, and we
-                are also dedicated to shaping more bright future of living
-                spaces.
+                Tact Innovations Design &amp; General Contracting is a premier
+                design and construction firm with a distinguished reputation for
+                delivering extraordinary spaces. We blend visionary architecture
+                with disciplined engineering, transforming ambitious ideas into
+                enduring built reality.
               </p>
               <p className="about-body">
-                With a passion for innovation, sustainability, and aesthetics,
-                we transform architectural dreams into reality.
+                Since our founding, we have been trusted by Egypt's most
+                discerning clients — from landmark commercial towers to intimate
+                residential masterpieces — each a testament to our unwavering
+                commitment to excellence.
               </p>
 
               <div className="about-stats-rule" />
               <div className="about-stats">
                 {[
-                  { num: "15+", lbl: "Years of Excellence" },
-                  { num: "200+", lbl: "Projects Completed" },
-                  { num: "50+", lbl: "Expert Team" },
+                  { from: 0, to: 15,  suffix: "+", lbl: "Years of Excellence" },
+                  { from: 0, to: 200, suffix: "+", lbl: "Projects Completed" },
+                  { from: 0, to: 50,  suffix: "+", lbl: "Expert Team" },
                 ].map((s) => (
                   <div className="about-stat" key={s.lbl}>
-                    <span className="about-stat-num">{s.num}</span>
+                    <span className="about-stat-num">
+                      <CountUp
+                        from={s.from}
+                        to={s.to}
+                        separator=","
+                        direction="up"
+                        duration={2}
+                        className="count-up-text"
+                      />
+                      {s.suffix}
+                    </span>
                     <span className="about-stat-lbl">{s.lbl}</span>
                   </div>
                 ))}
               </div>
             </div>
           </Reveal>
+
         </div>
       </section>
     </>
