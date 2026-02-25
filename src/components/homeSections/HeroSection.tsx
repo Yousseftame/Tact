@@ -13,7 +13,6 @@ const styles = `
     background: #05080A;
   }
 
-  /* Background photo */
   .hero-bg {
     position: absolute;
     inset: 0;
@@ -21,13 +20,11 @@ const styles = `
     background-size: cover;
     background-position: center 40%;
     transform-origin: center;
-    transition: transform 2.4s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 2s ease;
+    transition: transform 2.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 2s ease;
   }
   .hero-bg.loading { transform: scale(1.09); opacity: 0; }
   .hero-bg.loaded  { transform: scale(1);    opacity: 1; }
 
-  /* Layered gradient overlays for depth */
   .hero-overlay {
     position: absolute;
     inset: 0;
@@ -43,7 +40,6 @@ const styles = `
         rgba(3,5,7,0.85) 100%);
   }
 
-  /* Subtle gold grain texture */
   .hero-noise {
     position: absolute;
     inset: 0;
@@ -52,7 +48,6 @@ const styles = `
     pointer-events: none;
   }
 
-  /* Vertical gold rule on far left */
   .hero-side-rule {
     position: absolute;
     left: 56px;
@@ -66,7 +61,7 @@ const styles = `
   }
   .hero-side-rule.loaded { height: 220px; }
 
-  /* Main content */
+  /* ── Main content ── */
   .hero-content {
     position: relative;
     z-index: 4;
@@ -88,7 +83,6 @@ const styles = `
     padding-top: 10px;
   }
 
-  /* Eyebrow */
   .hero-eyebrow {
     font-family: 'Cormorant SC', serif;
     font-size: 9.5px;
@@ -103,7 +97,6 @@ const styles = `
   }
   .hero-eyebrow.loaded { opacity: 1; transform: translateY(0); }
 
-  /* Main headline */
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(52px, 7vw, 100px);
@@ -117,18 +110,9 @@ const styles = `
     transition: opacity 1.1s ease 0.75s, transform 1.1s cubic-bezier(0.16,1,0.3,1) 0.75s;
   }
   .hero-title.loaded { opacity: 1; transform: translateY(0); }
+  .hero-title .line-italic { font-style: italic; color: #C4A464; display: block; font-weight: 300; }
+  .hero-title .line-normal { display: block; }
 
-  .hero-title .line-italic {
-    font-style: italic;
-    color: #C4A464;
-    display: block;
-    font-weight: 300;
-  }
-  .hero-title .line-normal {
-    display: block;
-  }
-
-  /* Decorative ornament */
   .hero-ornament {
     display: flex;
     align-items: center;
@@ -138,24 +122,10 @@ const styles = `
     transition: opacity 1s ease 1s;
   }
   .hero-ornament.loaded { opacity: 1; }
-  .hero-ornament-line {
-    height: 1px;
-    width: 50px;
-    background: linear-gradient(90deg, #B8975A, rgba(184,151,90,0.15));
-  }
-  .hero-ornament-diamond {
-    width: 5px; height: 5px;
-    background: #B8975A;
-    transform: rotate(45deg);
-    flex-shrink: 0;
-  }
-  .hero-ornament-line-right {
-    height: 1px;
-    width: 30px;
-    background: linear-gradient(90deg, rgba(184,151,90,0.4), transparent);
-  }
+  .hero-ornament-line { height: 1px; width: 50px; background: linear-gradient(90deg, #B8975A, rgba(184,151,90,0.15)); }
+  .hero-ornament-diamond { width: 5px; height: 5px; background: #B8975A; transform: rotate(45deg); flex-shrink: 0; }
+  .hero-ornament-line-right { height: 1px; width: 30px; background: linear-gradient(90deg, rgba(184,151,90,0.4), transparent); }
 
-  /* Right column — established badge */
   .hero-badge {
     font-family: 'Cormorant SC', serif;
     font-size: 9px;
@@ -170,7 +140,6 @@ const styles = `
   }
   .hero-badge.loaded { opacity: 1; }
 
-  /* Quote block on right */
   .hero-quote-block {
     opacity: 0;
     transform: translateY(16px);
@@ -186,7 +155,6 @@ const styles = `
     margin-bottom: -10px;
     display: block;
   }
-
   .hero-quote {
     font-family: 'EB Garamond', serif;
     font-size: clamp(15px, 1.3vw, 17px);
@@ -197,17 +165,12 @@ const styles = `
     max-width: 420px;
     margin: 0 0 30px 0;
   }
-
   .hero-cite {
     display: flex;
     align-items: center;
     gap: 14px;
   }
-  .hero-cite-line {
-    width: 28px; height: 1px;
-    background: #B8975A;
-    flex-shrink: 0;
-  }
+  .hero-cite-line { width: 28px; height: 1px; background: #B8975A; flex-shrink: 0; }
   .hero-cite-text {
     font-family: 'Cormorant SC', serif;
     font-size: 9px;
@@ -216,7 +179,7 @@ const styles = `
     color: #B8975A;
   }
 
-  /* Scroll indicator bottom center */
+  /* Scroll indicator */
   .hero-scroll {
     position: absolute;
     bottom: 40px;
@@ -230,9 +193,7 @@ const styles = `
     opacity: 0;
     animation: fadeInScroll 1s ease 2s forwards;
   }
-  @keyframes fadeInScroll {
-    to { opacity: 1; }
-  }
+  @keyframes fadeInScroll { to { opacity: 1; } }
   .hero-scroll-text {
     font-family: 'Cormorant SC', serif;
     font-size: 8px;
@@ -241,8 +202,7 @@ const styles = `
     color: rgba(184,151,90,0.5);
   }
   .hero-scroll-line {
-    width: 1px;
-    height: 52px;
+    width: 1px; height: 52px;
     background: linear-gradient(to bottom, rgba(184,151,90,0.7), transparent);
     animation: scrollDrop 2s ease-in-out infinite;
   }
@@ -252,7 +212,6 @@ const styles = `
     100% { transform: scaleY(1); transform-origin: top; opacity: 0; }
   }
 
-  /* Corner accent */
   .hero-corner {
     position: absolute;
     top: 50px; right: 55px;
@@ -261,19 +220,57 @@ const styles = `
     transition: opacity 1s ease 1.5s;
   }
   .hero-corner.loaded { opacity: 1; }
-  .hero-corner svg {
-    width: 60px; height: 60px;
+  .hero-corner svg { width: 60px; height: 60px; }
+
+  /* ── DESKTOP: two columns ── */
+  @media (min-width: 901px) {
+    /* nothing changes from original */
   }
 
+  /* ── MOBILE ── */
   @media (max-width: 900px) {
     .hero-content {
       grid-template-columns: 1fr;
-      padding: 0 32px;
-      gap: 40px;
+      padding: 0 28px;
+      gap: 0;
+      align-items: flex-start;
+      padding-top: 110px;
+      padding-bottom: 100px;
+      height: 100%;
+      overflow-y: auto;
     }
-    .hero-right { display: none; }
+
     .hero-side-rule { display: none; }
     .hero-title { font-size: clamp(48px, 11vw, 72px); }
+
+    /* Show right column on mobile — stacked below */
+    .hero-right {
+      display: flex;
+      padding-top: 32px;
+      border-top: 1px solid rgba(184,151,90,0.12);
+      margin-top: 8px;
+    }
+
+    /* Slightly smaller quote mark on mobile */
+    .hero-quote-mark { font-size: 48px; }
+
+    /* Badge smaller on mobile */
+    .hero-badge {
+      font-size: 8px;
+      letter-spacing: 4px;
+      padding: 8px 16px;
+      margin-bottom: 28px;
+    }
+
+    /* Quote text readable on small screens */
+    .hero-quote {
+      font-size: clamp(14px, 3.8vw, 16px);
+      max-width: 100%;
+      line-height: 1.9;
+    }
+
+    .hero-scroll { display: none; }
+    .hero-corner { display: none; }
   }
 `;
 
@@ -289,15 +286,11 @@ export default function HeroSection() {
     <>
       <style>{styles}</style>
       <section className="hero">
-        {/* Backgrounds */}
         <div className={`hero-bg ${cls}`} />
         <div className="hero-overlay" />
         <div className="hero-noise" />
-
-        {/* Left vertical rule */}
         <div className={`hero-side-rule ${cls}`} />
 
-        {/* Corner ornament */}
         <div className={`hero-corner ${cls}`}>
           <svg viewBox="0 0 60 60" fill="none">
             <path
@@ -316,19 +309,16 @@ export default function HeroSection() {
           </svg>
         </div>
 
-        {/* Main content grid */}
         <div className="hero-content">
           {/* LEFT: Brand + Title */}
           <div className="hero-left">
             <p className={`hero-eyebrow ${cls}`}>
               Est. 2025 &nbsp;·&nbsp; Cairo, Egypt
             </p>
-
             <h1 className={`hero-title ${cls}`}>
               <span className="line-normal">Tact</span>
               <span className="line-italic">Innovations</span>
             </h1>
-
             <div className={`hero-ornament ${cls}`}>
               <div className="hero-ornament-line" />
               <div className="hero-ornament-diamond" />
@@ -336,12 +326,11 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT: Quote */}
+          {/* RIGHT: Quote — now visible on mobile too */}
           <div className="hero-right">
             <div className={`hero-badge ${cls}`}>
               Design &amp; General Contracting
             </div>
-
             <div className={`hero-quote-block ${cls}`}>
               <span className="hero-quote-mark">"</span>
               <p className="hero-quote">
@@ -361,7 +350,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="hero-scroll">
           <span className="hero-scroll-text">Scroll</span>
           <div className="hero-scroll-line" />

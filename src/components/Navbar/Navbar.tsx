@@ -92,7 +92,6 @@ const styles = `
     display: block;
   }
 
-  /* Slim underline slides in from left */
   .navbar-links li a::after {
     content: '';
     position: absolute;
@@ -169,7 +168,6 @@ const styles = `
     overflow: hidden;
   }
 
-  /* Animated overlay panels */
   .mobile-menu-bg {
     position: absolute;
     inset: 0;
@@ -180,7 +178,6 @@ const styles = `
   .mobile-menu.open .mobile-menu-bg { transform: translateY(0); }
   .mobile-menu.open { pointer-events: all; }
 
-  /* Grain overlay */
   .mobile-menu-noise {
     position: absolute;
     inset: 0;
@@ -189,7 +186,6 @@ const styles = `
     pointer-events: none;
   }
 
-  /* Decorative vertical lines */
   .mobile-menu-lines {
     position: absolute;
     inset: 0;
@@ -217,7 +213,6 @@ const styles = `
     padding: 0 40px;
   }
 
-  /* Label above links */
   .mobile-menu-label {
     font-family: 'Raleway', sans-serif;
     font-size: 9px;
@@ -267,9 +262,26 @@ const styles = `
   .mobile-menu.open .mobile-menu-link:nth-child(3) { opacity:1; transform:translateY(0); transition-delay: 0.42s; }
   .mobile-menu.open .mobile-menu-link:nth-child(4) { opacity:1; transform:translateY(0); transition-delay: 0.49s; }
 
-  /* Close hint */
+  /* Mobile CTA inside overlay */
+  .mobile-menu-cta {
+    margin-top: 40px;
+    font-family: 'Cormorant SC', serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #05080A;
+    text-decoration: none;
+    padding: 14px 36px;
+    background: #B8975A;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease 0.56s, transform 0.4s ease 0.56s;
+  }
+  .mobile-menu.open .mobile-menu-cta { opacity: 1; transform: translateY(0); }
+
   .mobile-menu-close-hint {
-    margin-top: 48px;
+    margin-top: 28px;
     font-family: 'Raleway', sans-serif;
     font-size: 9px;
     font-weight: 400;
@@ -277,7 +289,7 @@ const styles = `
     text-transform: uppercase;
     color: rgba(184,151,90,0.25);
     opacity: 0;
-    transition: opacity 0.4s ease 0.55s;
+    transition: opacity 0.4s ease 0.65s;
   }
   .mobile-menu.open .mobile-menu-close-hint { opacity: 1; }
 
@@ -302,7 +314,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when menu open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -322,7 +333,6 @@ export default function Navbar() {
 
       <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <div className="navbar-inner">
-          {/* Logo */}
           <Link to="/" className="navbar-logo">
             <img src="/tact.png" alt="Tact Innovations" />
             <div className="navbar-logo-sep" />
@@ -333,7 +343,6 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop links */}
           <ul className="navbar-links">
             {links.map((l) => (
               <li key={l.path}>
@@ -347,12 +356,10 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA */}
-          <a href="tel:01559193996" target="_blank"  className="navbar-cta">
+          <a href="tel:01559193996" target="_blank" className="navbar-cta">
             Contact Us
           </a>
 
-          {/* Hamburger */}
           <button
             className={`hamburger${menuOpen ? " open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -387,6 +394,16 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
+
+          {/* Contact Us inside mobile menu */}
+          <a
+            href="tel:01559193996"
+            className="mobile-menu-cta"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact Us
+          </a>
+
           <p className="mobile-menu-close-hint">Tap to close</p>
         </div>
       </div>
