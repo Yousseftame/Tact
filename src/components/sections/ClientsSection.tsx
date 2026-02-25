@@ -264,8 +264,8 @@ const styles = `
   }
 
   .cl2-logo-img {
-    max-height: 46px;
-    max-width: 140px;
+    max-height: 72px;
+    max-width:  200px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -286,6 +286,26 @@ const styles = `
     opacity: 1;
     transform: scale(1.06);
   }
+
+  /* ─── Simple Centered Header ─── */
+.cl2-header-simple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.cl2-title.centered {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #F0EAE0;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
 
   /* ─── Bottom ornament ─── */
   .cl2-footer {
@@ -324,7 +344,7 @@ const styles = `
     .cl2-section { padding: 80px 24px 90px; }
     .cl2-stat { min-width: 100%; border-right: none; border-bottom: 1px solid rgba(184,151,90,0.1); }
     .cl2-logo-pill { padding: 22px 32px; min-width: 150px; }
-    .cl2-logo-img { max-height: 36px; max-width: 110px; }
+    .cl2-logo-img { max-height: 55px; max-width: 150px; }
   }
 `;
 
@@ -346,74 +366,48 @@ export default function ClientsSection() {
 
         <div className="cl2-inner">
           {/* ── Header ── */}
-          <div className="cl2-header">
-            <Reveal direction="left" delay={100}>
-              <div>
-                <p className="cl2-label">Trusted By</p>
-                <h2 className="cl2-title">
+          {/* ── Header ── */}
+          <Reveal>
+            <div className="cv2-header">
+              <p className="cv2-label">Our Network</p>
+
+              <h2 className="cv2-title">
+                <SplitText
+                  text="Our Clients "
+                  delay={45}
+                  duration={1.2}
+                  ease="power3.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 38 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-60px"
+                  textAlign="center"
+                  tag="span"
+                />
+                <br />
+                <em>
                   <SplitText
-                    text="Our Clients"
-                    delay={40}
+                    text="& Partners"
+                    delay={55}
                     duration={1.2}
                     ease="power3.out"
                     splitType="chars"
-                    from={{ opacity: 0, y: 36 }}
+                    from={{ opacity: 0, y: 38 }}
                     to={{ opacity: 1, y: 0 }}
                     threshold={0.1}
                     rootMargin="-60px"
-                    textAlign="left"
+                    textAlign="center"
                     tag="span"
                   />
-                  <br />
-                  <em>
-                    <SplitText
-                      text="& Partners"
-                      delay={52}
-                      duration={1.2}
-                      ease="power3.out"
-                      splitType="chars"
-                      from={{ opacity: 0, y: 36 }}
-                      to={{ opacity: 1, y: 0 }}
-                      threshold={0.1}
-                      rootMargin="-60px"
-                      textAlign="left"
-                      tag="span"
-                    />
-                  </em>
-                </h2>
-              </div>
-            </Reveal>
+                </em>
+              </h2>
 
-            <Reveal direction="right" delay={200}>
-              <div className="cl2-header-right">
-                <div className="cl2-rule" />
-                <p className="cl2-desc">
-                  We are honored to have partnered with some of Egypt's and the
-                  region's most prestigious organizations.
-                </p>
-                <p className="cl2-desc-sub">
-                  Each collaboration is a testament to the trust our clients
-                  place in Tact Innovations — delivering projects that redefine
-                  their industries and stand the test of time.
-                </p>
+              <div className="cv2-ornament">
+                <div className="cv2-orn-line rev" />
+                <div className="cv2-orn-diamond" />
+                <div className="cv2-orn-line" />
               </div>
-            </Reveal>
-          </div>
-
-          {/* ── Stats strip ── */}
-          <Reveal delay={200}>
-            <div className="cl2-stats">
-              {[
-                { num: "10+", lbl: "Trusted Partners" },
-                { num: "15+", lbl: "Years of Trust" },
-                { num: "200+", lbl: "Projects Delivered" },
-                { num: "100%", lbl: "Client Satisfaction" },
-              ].map((s) => (
-                <div className="cl2-stat" key={s.lbl}>
-                  <span className="cl2-stat-num">{s.num}</span>
-                  <span className="cl2-stat-lbl">{s.lbl}</span>
-                </div>
-              ))}
             </div>
           </Reveal>
 
