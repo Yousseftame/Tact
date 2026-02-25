@@ -12,7 +12,7 @@ import Footer from "../../components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      
       <HeroSection />
       <AboutSection />
       <VisionMissionSection />
@@ -20,7 +20,7 @@ export default function Home() {
       <WhyUsSection />
       <ServicesSection />
       <ClientsSection />
-      <Footer />
+    
     </>
   );
 }

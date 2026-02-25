@@ -205,18 +205,40 @@ const styles = `
 
   /* floating index number on image */
   .cv2-img-num {
-    position: absolute;
-    top: 18px; right: 20px;
-    z-index: 2;
-    font-family: 'Cormorant SC', serif;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: rgba(196,164,100,0.55);
-    border: 1px solid rgba(196,164,100,0.2);
-    padding: 5px 10px;
-    backdrop-filter: blur(4px);
-    background: rgba(5,8,10,0.8);
-  }
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 2;
+
+  font-family: 'Cormorant SC', serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  color: #C6A75E;
+
+  padding: 6px 14px;
+
+  background: rgba(10, 14, 18, 0.75);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(198, 167, 94, 0.35);
+  border-radius: 30px;
+
+  box-shadow: 
+    0 0 12px rgba(198, 167, 94, 0.15),
+    inset 0 0 6px rgba(198, 167, 94, 0.08);
+
+  transition: all 0.35s ease;
+}
+.cv2-img-num:hover {
+  background: rgba(15, 20, 25, 0.9);
+  border-color: rgba(198, 167, 94, 0.6);
+  box-shadow: 
+    0 0 18px rgba(198, 167, 94, 0.3),
+    inset 0 0 8px rgba(198, 167, 94, 0.15);
+  transform: translateY(-2px);
+}
+
 
   /* keyword tag bottom of image */
   .cv2-img-tag {

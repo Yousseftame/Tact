@@ -38,7 +38,7 @@ const styles = `
   }
   .navbar-links a {
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
