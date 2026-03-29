@@ -208,7 +208,7 @@ export const projectSectionStyles = `
   .proj-img-expand svg {
     width: 14px; height: 14px;
     stroke: #B8975A;
-    stroke-width: 1.5;
+    strokeWidth: 1.5;
     fill: none;
   }
   .proj-img-wrap:hover .proj-img-expand {
@@ -256,7 +256,7 @@ export const projectSectionStyles = `
   }
   .proj-lightbox-close svg {
     width: 16px; height: 16px;
-    stroke: #B8975A; stroke-width: 1.5; fill: none;
+    stroke: #B8975A; strokeWidth: 1.5; fill: none;
   }
   .proj-lightbox-nav {
     position: absolute;
@@ -275,7 +275,7 @@ export const projectSectionStyles = `
   }
   .proj-lightbox-nav svg {
     width: 18px; height: 18px;
-    stroke: #B8975A; stroke-width: 1.5; fill: none;
+    stroke: #B8975A; strokeWidth: 1.5; fill: none;
   }
   .proj-lightbox-prev { left: 28px; }
   .proj-lightbox-next { right: 28px; }

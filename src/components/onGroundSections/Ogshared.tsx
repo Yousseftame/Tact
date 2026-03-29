@@ -313,7 +313,7 @@ export const ogStyles = `
     opacity: 0; transform: scale(0.6) rotate(-45deg);
     transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16,1,0.3,1);
   }
-  .og-img-expand svg { width: 12px; height: 12px; stroke: #B8975A; stroke-width: 1.5; fill: none; }
+  .og-img-expand svg { width: 12px; height: 12px; stroke: #B8975A; strokeWidth: 1.5; fill: none; }
   .og-img-wrap:hover .og-img-expand { opacity: 1; transform: scale(1) rotate(0deg); }
 
   /* ── LIGHTBOX ── */
@@ -360,7 +360,7 @@ export const ogStyles = `
     transition: border-color 0.3s, background 0.3s;
   }
   .og-lightbox-btn:hover { border-color: #B8975A; background: rgba(184,151,90,0.08); }
-  .og-lightbox-btn svg { width: 16px; height: 16px; stroke: #B8975A; stroke-width: 1.5; fill: none; }
+  .og-lightbox-btn svg { width: 16px; height: 16px; stroke: #B8975A; strokeWidth: 1.5; fill: none; }
   .og-lightbox-counter {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px; font-weight: 300;
@@ -379,7 +379,7 @@ export const ogStyles = `
     transition: border-color 0.3s, background 0.3s;
   }
   .og-lightbox-close:hover { border-color: #B8975A; background: rgba(184,151,90,0.08); }
-  .og-lightbox-close svg { width: 14px; height: 14px; stroke: #B8975A; stroke-width: 1.5; fill: none; }
+  .og-lightbox-close svg { width: 14px; height: 14px; stroke: #B8975A; strokeWidth: 1.5; fill: none; }
 
   /* ── SCROLL REVEAL ── */
   .og-reveal {

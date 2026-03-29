@@ -344,8 +344,8 @@ export default function Footer() {
                     y1="6.5"
                     x2="17.51"
                     y2="6.5"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </a>
@@ -436,7 +436,11 @@ export default function Footer() {
               </div>
               <div className="footer-contact-item">
                 <span className="footer-contact-label">Phone</span>
-                <a href="tel:01559193996" target="_blank" className="footer-contact-value">
+                <a
+                  href="tel:01559193996"
+                  target="_blank"
+                  className="footer-contact-value"
+                >
                   +20 155 9193 996
                 </a>
               </div>

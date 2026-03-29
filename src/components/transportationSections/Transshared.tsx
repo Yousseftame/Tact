@@ -237,7 +237,7 @@ export const transStyles = `
   }
   .trans-status-tag svg {
     width: 10px; height: 10px;
-    stroke: rgba(184,151,90,0.5); stroke-width: 1.5; fill: none;
+    stroke: rgba(184,151,90,0.5); strokeWidth: 1.5; fill: none;
     flex-shrink: 0;
   }
 
@@ -352,7 +352,7 @@ export const transStyles = `
     opacity: 0; transform: translateY(6px);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  .trans-img-expand svg { width: 13px; height: 13px; stroke: #B8975A; stroke-width: 1.5; fill: none; }
+  .trans-img-expand svg { width: 13px; height: 13px; stroke: #B8975A; strokeWidth: 1.5; fill: none; }
   .trans-img-wrap:hover .trans-img-expand { opacity: 1; transform: translateY(0); }
 
   /* ── LIGHTBOX ── */
@@ -393,7 +393,7 @@ export const transStyles = `
   .trans-lightbox-prev:hover,
   .trans-lightbox-next:hover { border-color: #B8975A; background: rgba(184,151,90,0.08); }
   .trans-lightbox-prev svg,
-  .trans-lightbox-next svg { width: 16px; height: 16px; stroke: #B8975A; stroke-width: 1.5; fill: none; }
+  .trans-lightbox-next svg { width: 16px; height: 16px; stroke: #B8975A; strokeWidth: 1.5; fill: none; }
 
   .trans-lightbox-footer {
     display: flex; align-items: center; gap: 16px;
@@ -419,7 +419,7 @@ export const transStyles = `
     transition: border-color 0.3s, background 0.3s;
   }
   .trans-lightbox-close:hover { border-color: #B8975A; background: rgba(184,151,90,0.08); }
-  .trans-lightbox-close svg { width: 14px; height: 14px; stroke: #B8975A; stroke-width: 1.5; fill: none; }
+  .trans-lightbox-close svg { width: 14px; height: 14px; stroke: #B8975A; strokeWidth: 1.5; fill: none; }
 
   /* ── SCROLL REVEAL ── */
   .trans-reveal {
