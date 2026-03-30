@@ -2,42 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/image.png" />
+    <link rel="icon" type="image/svg+xml" href="/tact.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tact Innovations — Design & General Contracting</title>
-    <meta name="description" content="Tact Innovations is a leading architectural design and general contracting firm in Cairo, Egypt." />
+    <meta name="description" content="Tact Innovations is a leading architectural design and general contracting firm in Cairo, Egypt. We specialize in 3D design, fit-out, facility management, and transportation." />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ✅ FIX 1: Preconnect to Google Fonts (replaces render-blocking @import) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
 
-    <!-- Non-blocking font load -->
-    <link
-      rel="preload"
-      as="style"
+    <!-- ✅ FIX 2: Load ALL fonts in ONE request with display=swap (non-blocking) -->
+    <!-- <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+SC:wght@300;400&family=EB+Garamond:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600;700&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+SC:wght@300;400&family=EB+Garamond:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" />
-    </noscript>
+    /> -->
 
-    <!-- Preload LCP image (responsive) -->
-    <link
-      rel="preload"
-      as="image"
-      href="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=55&fit=crop&crop=center&fm=webp"
-      imagesrcset="
-        https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=50&fit=crop&crop=center&fm=webp 600w,
-        https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=55&fit=crop&crop=center&fm=webp 900w,
-        https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=65&fit=crop&crop=center&fm=webp 1400w
-      "
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
+    <!-- ✅ FIX 3: Preload hero image so LCP is discovered immediately -->
+        <link rel="icon" type="image/png" href="/image.png" />
 
-    <!-- Preload logo -->
-    <link rel="preload" as="image" href="/tact.webp" fetchpriority="high" />
+
+    <!-- ✅ FIX 4: Preload the site logo (above the fold) -->
+    <link rel="preload" as="image" href="/tact.png" />
   </head>
   <body>
     <div id="root"></div>
