@@ -310,6 +310,9 @@ export default function Footer() {
                 src="/tact.png"
                 alt="Tact Innovations"
                 className="footer-logo"
+                loading="lazy" // ← add this
+                width="160"
+                height="36"
               />
               <div className="footer-logo-divider" />
               <div className="footer-logo-sub">

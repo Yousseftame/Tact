@@ -279,7 +279,7 @@ export default function HeroSection() {
         <img
           className={`hero-bg-img ${cls}`}
           // ✅ FIX: Add fm=webp for WebP format, smaller file size
-          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80&fit=crop&crop=center&fm=webp"
+          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=60&fit=crop&crop=center&fm=webp"
           // Fallback for browsers without WebP (Unsplash handles this automatically)
           alt=""
           // ✅ FIX: fetchpriority=high so browser loads this before anything else

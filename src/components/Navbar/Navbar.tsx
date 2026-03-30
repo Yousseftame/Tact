@@ -334,7 +334,13 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <div className="navbar-inner">
           <Link to="/" className="navbar-logo">
-            <img src="/tact.png" alt="Tact Innovations" />
+            <img
+              src="/tact.png"
+              alt="Tact Innovations"
+              fetchPriority="high" // ← add this
+              width="160" // ← add this
+              height="40" // ← add this
+            />{" "}
             <div className="navbar-logo-sep" />
             <div className="navbar-logo-text">
               Design &amp; General
